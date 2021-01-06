@@ -17,7 +17,7 @@ some static binaries for linux, maybe useful for bootstrapping, no big deal
 | `brssl` | bearssl ssl/tls implementation | https://bearssl.org/ |
 | `busybox` | busybox single-binary userspace | https://busybox.net/ |
 | `ccache` | c/c++ compiler cache, v3.x | https://ccache.dev/ |
-| `coreutils` | gnu coreutils in single-binary form | https://www.gnu.org/software/coreutils/ |
+| `coreutils` | gnu coreutils in single-binary symlink form | https://www.gnu.org/software/coreutils/ |
 | `curl` | curl http/https/ftp/etc. client | https://curl.se/ |
 | `dash` | dash shell | http://gondor.apana.org.au/~herbert/dash/ |
 | `dropbearmulti` | dropbear single-binary ssh/scp client/server | https://matt.ucc.asn.au/dropbear/dropbear.html |
