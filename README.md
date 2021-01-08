@@ -7,7 +7,19 @@ some static binaries for linux, maybe useful for bootstrapping, no big deal
 - built with/via [crosware](https://github.com/ryanwoodsmall/crosware)
 - binaries are built with [musl-cross-make](https://github.com/richfelker/musl-cross-make) compilers
 - static compilers are available at [musl-misc](https://github.com/ryanwoodsmall/musl-misc)
+- sabotage's [netbsd-curses](https://github.com/sabotage-linux/netbsd-curses) is used to avoid external termcap/terminfo db
 - can be run with proper `qemu-${ARCH}-static` setup directly on a system or in a docker container
+
+# note!
+
+:warning: _bing stinking warning_ :warning:
+
+- **binaries almost certainly will not be the latest version!**
+- **some architectures may or may not be in sync, have all binaries available, etc.!**
+
+these may be useful but they're a means to an end, so don't replace your userspace with these...
+
+updates will be provided, maybe, sometime, on an "i guess i should maybe update that" basis.
 
 # binaries
 
@@ -46,14 +58,3 @@ some static binaries for linux, maybe useful for bootstrapping, no big deal
 | `xml` | xmlstartlet toolkit | http://xmlstar.sourceforge.net/ |
 | `xmllint` | libxml2 linter | http://xmlsoft.org/ |
 | `xz` | xz/lzma (de-)compression tool | https://tukaani.org/xz/ |
-
-# note!
-
-:warning: _bing stinking warning_ :warning:
-
-- **binaries almost certainly will not be the latest version!**
-- **some architectures may or may not be in sync, have all binaries available, etc.!**
-
-these may be useful but they're a means to an end, so don't replace your userspace with these...
-
-updates will be provided, maybe, sometime, on an "i guess i should maybe update that" basis.
