@@ -19,7 +19,7 @@ some static binaries for linux, maybe useful for bootstrapping, no big deal
 
 these may be useful but they're a means to an end, so don't replace your userspace with these...
 
-updates will be provided, maybe, sometime, on an "i guess i should maybe update that" basis.
+updates will be provided, possibly, sometime, on an "i guess i should maybe update that" basis.
 
 # binaries
 
