@@ -32,7 +32,7 @@ export archdir="${td}/${archdir}"
 test -e "${archdir}" || mkdir -p "${archdir}"
 test -e "${archdir}" || failexit "${archdir} does not exist"
 
-: ${staticbinaryimage:="crosware-static-binaries"}
+: ${staticbinaryimage:="crosware-build-static-binaries"}
 : ${cwtop:="/usr/local/crosware"}
 : ${cwsw:="${cwtop}/software"}
 : ${tlsprovider:="libressl"}
