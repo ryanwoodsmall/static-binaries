@@ -3,7 +3,7 @@
 set -eu
 set -o pipefail
 
-: ${specialrecipes="busybox toybox sbase-box ubase-box coreutils dropbearmulti"}
+: ${specialtools="busybox toybox sbase-box ubase-box coreutils dropbearmulti"}
 : ${toolorder=""}
 : ${allowroot="0"}
 : ${forceoverwrite="0"}
@@ -35,11 +35,11 @@ export archddir="${td}/${archdir}"
 test -e "${archdir}" || failexit "no such directory ${archdir}"
 if [ -z "${toolorder}" ] ; then
   if [ ${forceoverwrite} -eq 0 ] ; then
-    toolorder="${specialrecipes}"
+    toolorder="${specialtools}"
   else
-    toolorder="$(echo ${specialrecipes} | tr ' ' '\n' | tac | xargs echo)"
+    toolorder="$(echo ${specialtools} | tr ' ' '\n' | tac | xargs echo)"
   fi
-  for p in $(find "${archdir}" -maxdepth 1 -mindepth 1 ! -type d -exec basename {} \; | sort | egrep -v "^(${specialrecipes// /|})$") ; do
+  for p in $(find "${archdir}" -maxdepth 1 -mindepth 1 ! -type d -exec basename {} \; | sort | egrep -v "^(${specialtools// /|})$") ; do
     if [ ${forceoverwrite} -eq 0 ] ; then
       toolorder="${p} ${toolorder}"
     else
