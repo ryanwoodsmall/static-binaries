@@ -1,5 +1,5 @@
 : ${archdir:=""}
-: ${buildimage:="ryanwoodsmall/crosware"} 
+: ${buildimage:="ryanwoodsmall/crosware"}
 : ${checkoutimage:="debian"}
 : ${dockerarch:="$(docker info 2>/dev/null | awk -F: '/Architecture/{print $NF}')"}
 : ${dockerimagearch:=""}
