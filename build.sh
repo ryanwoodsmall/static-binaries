@@ -72,6 +72,7 @@ if [ -z "${recipelist}" ] ; then
   recipelist+=" screen"
   # openssl
   recipelist+=" socat"
+  recipelist+=" sslh"
   # openssl
   recipelist+=" stunnel"
   recipelist+=" tini"
@@ -112,6 +113,7 @@ if [ -z "${binarylist}" ] ; then
   binarylist+=" ${cwsw}/sbase/current/bin/sbase-box"
   binarylist+=" ${cwsw}/screen/current/bin/screen"
   binarylist+=" ${cwsw}/socat/current/bin/socat"
+  binarylist+=" ${cwsw}/sslh/current/sbin/sslh"
   binarylist+=" ${cwsw}/stunnel/current/bin/stunnel"
   binarylist+=" ${cwsw}/tini/current/sbin/tini"
   binarylist+=" ${cwsw}/tmux/current/bin/tmux"
