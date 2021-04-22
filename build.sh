@@ -86,6 +86,7 @@ fi
 if [ -z "${binarylist}" ] ; then
   binarylist+=" ${cwsw}/9base/current/bin/mk"
   binarylist+=" ${cwsw}/9base/current/bin/rc"
+  binarylist+=" ${cwsw}/9base/current/bin/urlencode"
   binarylist+=" ${cwsw}/bash/current/bin/bash"
   binarylist+=" ${cwsw}/bearssl/current/bin/brssl"
   binarylist+=" ${cwsw}/bootstrapmake/current/bin/make"
