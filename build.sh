@@ -50,6 +50,7 @@ if [ -z "${recipelist}" ] ; then
   recipelist+=" busybox"
   recipelist+=" ccache"
   recipelist+=" coreutils"
+  recipelist+=" cryanc"
   # curl
   recipelist+=" curl${curlprovider}"
   recipelist+=" dash"
@@ -93,6 +94,7 @@ if [ -z "${binarylist}" ] ; then
   binarylist+=" ${cwsw}/busybox/current/bin/busybox"
   binarylist+=" ${cwsw}/ccache/current/bin/ccache"
   binarylist+=" ${cwsw}/coreutils/current/bin/coreutils"
+  binarylist+=" ${cwsw}/cryanc/current/bin/carl"
   binarylist+=" ${cwsw}/curl${curlprovider}/current/bin/curl"
   binarylist+=" ${cwsw}/dash/current/bin/dash"
   binarylist+=" ${cwsw}/dropbear/current/bin/dropbearmulti"
