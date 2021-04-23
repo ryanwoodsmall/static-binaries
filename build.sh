@@ -65,6 +65,7 @@ if [ -z "${recipelist}" ] ; then
   recipelist+=" mksh"
   recipelist+=" neatvi"
   recipelist+=" qemacs"
+  recipelist+=" patchelf"
   recipelist+=" rlwrap"
   recipelist+=" rsync"
   # git
@@ -108,6 +109,7 @@ if [ -z "${binarylist}" ] ; then
   binarylist+=" ${cwsw}/mksh/current/bin/mksh"
   binarylist+=" ${cwsw}/neatvi/current/bin/neatvi"
   binarylist+=" ${cwsw}/qemacs/current/bin/qemacs"
+  binarylist+=" ${cwsw}/patchelf/current/bin/patchelf"
   binarylist+=" ${cwsw}/rlwrap/current/bin/rlwrap"
   binarylist+=" ${cwsw}/rsync/current/bin/rsync"
   binarylist+=" ${cwsw}/sbase/current/bin/sbase-box"
