@@ -48,7 +48,6 @@ if [ -z "${toolorder}" ] ; then
   done
 fi
 
-# dropbear
 function special_install() {
   if [ ${#} -lt 1 ] ; then
     failexit "${FUNCNAME}: provide a tool name to install"
