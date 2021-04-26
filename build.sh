@@ -7,6 +7,8 @@
 # XXX - need away to turn off openssl and git recipes
 # XXX - should checkout image match target arch/${karch}/${uarch}
 # XXX - openrisc... man
+# XXX - dockerimagearch=zulu special handling?
+# XXX - check for and override CW_GIT_CMD in /etc/profile, /etc/profile.d/*
 #
 # single package with ccache, download and /usr/local/tmp volumes:
 #   env \
@@ -15,6 +17,15 @@
 #     recipelist=mksh \
 #     binarylist=/usr/local/crosware/software/mksh/current/bin/mksh \
 #       bash build.sh
+#
+# override CW_GIT_CMD to i.e. build some 9base binaries:
+#   ( time ( env extradockeropts="-v crosware-downloads:/usr/local/crosware/downloads -v crosware-ccache:/root/.ccache -v crosware-ult:/usr/local/tmp -e CW_GIT_CMD=jgitsh" \
+#                recipelist='zulu11musl 9base' \
+#                binarylist="$(echo ${cwsw}/9base/current/bin/{mk,rc,urlencode})" \
+#                  bash build.sh
+#          )
+#   ) 2>&1 | tee /tmp/build.out
+#
 
 set -eu
 set -o pipefail
@@ -143,14 +154,16 @@ RUN uname -m \
     && rm -rf ${cwtop} \
     && tar -C / -zxf /tmp/crosware.tar.bz2 \
     && cd - \
-    && echo 'export CW_GIT_CMD=git${tlsprovider}' >> /etc/profile.d/crosware.sh \
+    && echo ': \${CW_GIT_CMD:=git${tlsprovider}}' >> /etc/profile.d/crosware.sh \
+    && echo 'export CW_GIT_CMD' >> /etc/profile.d/crosware.sh \
     && . /etc/profile \
     && crosware install statictoolchain \
     && crosware install ccache \
     && echo '#!/usr/bin/env bash' > ${buildscript} \
     && echo '. /etc/profile' >> ${buildscript} \
-    && echo 'export CW_GIT_CMD=gitlibressl' >> ${buildscript} \
-    && echo 'for i in ${recipelist} ; do crosware check-installed \${i} || crosware install \${i} ; done' >> ${buildscript} \
+    && echo ': \${CW_GIT_CMD:=git${tlsprovider}}' >> ${buildscript} \
+    && echo 'export CW_GIT_CMD' >> ${buildscript} \
+    && echo 'for i in ${recipelist} ; do crosware check-installed \${i} || crosware install \${i} ; . /etc/profile ; done' >> ${buildscript} \
     && echo '. /etc/profile' >> ${buildscript} \
     && echo 'echo ${recipelist} | grep -i curl && { ln -sf \$(which curl-${curlprovider} | xargs realpath) \$(which curl-${curlprovider} | xargs realpath | xargs dirname)/curl ; } || true' >> ${buildscript} \
     && echo 'for b in ${binarylist} ; do strip --strip-all \$(realpath \${b}) ; install -m 0755 \$(realpath \${b}) ${outputdir}/\$(basename \${b}) ; done' >> ${buildscript} \
