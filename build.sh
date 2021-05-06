@@ -93,6 +93,7 @@ if [ -z "${recipelist}" ] ; then
   # git
   recipelist+=" ubase"
   recipelist+=" unrar"
+  recipelist+=" x509cert"
   recipelist+=" xmlstarlet"
   recipelist+=" xz"
 fi
@@ -133,6 +134,7 @@ if [ -z "${binarylist}" ] ; then
   binarylist+=" ${cwsw}/toybox/current/bin/toybox"
   binarylist+=" ${cwsw}/ubase/current/bin/ubase-box"
   binarylist+=" ${cwsw}/unrar/current/bin/unrar"
+  binarylist+=" ${cwsw}/x509cert/current/bin/x509cert"
   binarylist+=" ${cwsw}/xmlstarlet/current/bin/xml"
   binarylist+=" ${cwsw}/xz/current/bin/xz"
 fi
