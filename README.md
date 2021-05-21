@@ -12,7 +12,7 @@ some static binaries for linux, maybe useful for bootstrapping, no big deal
 
 # note!
 
-:warning: _bing stinking warning_ :warning:
+:warning: _big stinking warning_ :warning:
 
 - **binaries almost certainly will not be the latest version!**
 - **some architectures may or may not be in sync, have all binaries available, etc.!**
