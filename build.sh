@@ -53,7 +53,6 @@ test -e "${archdir}" || failexit "${archdir} does not exist"
 : ${extradockeropts:=""}
 : ${recipelist:=""}
 if [ -z "${recipelist}" ] ; then
-  # git
   recipelist+=" 9base"
   recipelist+=" bash"
   recipelist+=" bearssl"
@@ -72,6 +71,7 @@ if [ -z "${recipelist}" ] ; then
   recipelist+=" libxml2"
   # openssl
   recipelist+=" links"
+  recipelist+=" libixp"
   recipelist+=" miller"
   recipelist+=" mksh"
   recipelist+=" neatvi"
@@ -79,7 +79,6 @@ if [ -z "${recipelist}" ] ; then
   recipelist+=" qemacs"
   recipelist+=" rlwrap"
   recipelist+=" rsync"
-  # git
   recipelist+=" sbase"
   recipelist+=" screen"
   # openssl
@@ -90,7 +89,7 @@ if [ -z "${recipelist}" ] ; then
   recipelist+=" tini"
   recipelist+=" tmux"
   recipelist+=" toybox"
-  # git
+  recipelist+=" u9fs"
   recipelist+=" ubase"
   recipelist+=" unrar"
   recipelist+=" x509cert"
@@ -115,6 +114,7 @@ if [ -z "${binarylist}" ] ; then
   binarylist+=" ${cwsw}/jo/current/bin/jo"
   binarylist+=" ${cwsw}/jq/current/bin/jq"
   binarylist+=" ${cwsw}/less/current/bin/less"
+  binarylist+=" ${cwsw}/libixp/current/bin/ixpc"
   binarylist+=" ${cwsw}/libxml2/current/bin/xmllint"
   binarylist+=" ${cwsw}/links/current/bin/links"
   binarylist+=" ${cwsw}/miller/current/bin/mlr"
@@ -132,6 +132,7 @@ if [ -z "${binarylist}" ] ; then
   binarylist+=" ${cwsw}/tini/current/sbin/tini"
   binarylist+=" ${cwsw}/tmux/current/bin/tmux"
   binarylist+=" ${cwsw}/toybox/current/bin/toybox"
+  binarylist+=" ${cwsw}/u9fs/current/bin/u9fs"
   binarylist+=" ${cwsw}/ubase/current/bin/ubase-box"
   binarylist+=" ${cwsw}/unrar/current/bin/unrar"
   binarylist+=" ${cwsw}/x509cert/current/bin/x509cert"
