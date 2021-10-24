@@ -9,16 +9,12 @@ set -o pipefail
 declare -a dockerfile
 declare -a progs
 # hashes for docker and binary directories
-declare -A dockerarch bindir
+declare -A dockerarch
 dockerarch['amd64']='x86_64'
 dockerarch['arm64v8']='aarch64'
 dockerarch['arm32v6']='armhf'
 dockerarch['i386']='i686'
 dockerarch['riscv64']='riscv64'
-for d in ${!dockerarch[@]} ; do
-  bindir["${dockerarch[${d}]}"]="${d}"
-done
-unset d
 dockerarches="${!dockerarch[@]}"
 
 # vendor/image:arch defaults, overridable in environment
@@ -66,9 +62,7 @@ for arch in ${a} ; do
 done
 dockerfile+=( "RUN find . -type f | xargs toybox file | sort" )
 
-# kill existing runner and image
-docker kill ${t} || true
-docker rm ${t} || true
+# kill existing image
 docker image rm ${v}/${i}:${t} || true
 
 # build our image...
