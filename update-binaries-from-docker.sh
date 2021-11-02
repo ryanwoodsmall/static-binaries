@@ -18,11 +18,11 @@ dockerarch['riscv64']='riscv64'
 dockerarches="${!dockerarch[@]}"
 
 # vendor/image:arch defaults, overridable in environment
-: ${v="ryanwoodsmall"}
-: ${i="crosware"}
-: ${a="${dockerarches}"}
+: ${v:="ryanwoodsmall"}
+: ${i:="crosware"}
+: ${a:="${dockerarches}"}
 # tag default for generated image
-: ${t="static-binaries"}
+: ${t:="static-binaries"}
 
 # crosware vars
 export cwtop="/usr/local/crosware"
