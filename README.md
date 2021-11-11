@@ -58,3 +58,8 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 | `xml` | xmlstartlet toolkit | http://xmlstar.sourceforge.net/ |
 | `xmllint` | libxml2 linter | http://xmlsoft.org/ |
 | `xz` | xz/lzma (de-)compression tool | https://tukaani.org/xz/ |
+
+# todo
+
+- need to checksum/catalog binaries, sha-256 should work
+- capture versions as well?
