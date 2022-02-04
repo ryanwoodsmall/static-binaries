@@ -15,6 +15,8 @@
 #     cd - >/dev/null 2>&1
 #     exec $prog "$@"
 #
+# XXX - pack with xz/lzo/etc.? could be multi-arch shar'ed itself...
+#
 
 set -eu
 
