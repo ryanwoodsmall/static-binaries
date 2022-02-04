@@ -12,7 +12,8 @@ set -eu
 : ${workdir:="$(cd $(dirname $(basename ${0})) ; pwd)"}
 : ${archdir:="${workdir}"}
 : ${tmpdir:="${workdir}/tmp/${TS}_${$}_${RANDOM}_static-binary_bundle"}
-: ${sharopts:="--uuencode --no-md5-digest --no-check-existing --no-i18n"}
+: ${sharextopts:=""}
+: ${sharopts:="--uuencode --no-md5-digest --no-check-existing --no-i18n ${sharextopts}"}
 : ${sharprefix:="${TS}"}
 : ${sharext:="shar"}
 : ${bundlename:="${sharprefix}-bundle.${sharext}"}
