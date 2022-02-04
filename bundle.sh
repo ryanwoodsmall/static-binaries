@@ -6,8 +6,7 @@
 
 set -eu
 
-TS="$(date +%Y%m%d%H%M%S)"
-
+: ${TS:="$(date +%Y%m%d%H%M%S)"}
 : ${arches:="aarch64 armhf i686 riscv64 x86_64"}
 : ${bins:="bash busybox curl sbase-box toybox ubase-box"}
 : ${workdir:="$(cd $(dirname $(basename ${0})) ; pwd)"}
