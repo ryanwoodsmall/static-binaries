@@ -9,6 +9,7 @@
 #     sed -i '/{echo}.*(created|removed)/s,$,>/dev/null,g' prog
 #   at top of shar:
 #     prog=`realpath $0`
+#     cd /tmp
 #   at bottom:
 #     sh unshar-arch.sh >/dev/null 2>&1
 #     install -m 755 `basename $prog` $prog
