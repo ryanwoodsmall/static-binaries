@@ -3,6 +3,18 @@
 # create architecture-specific bundles and a megabundle with an arch extractor script
 # keep the bins to a minimum for the time being, enough to bootstrap some bash stuff
 #
+# XXX - self-modifying bin: single binary (curl, bash, ...) bundle that can unpack itself
+#   build with "--quiet-unshar"
+#   fix a couple of echo lines
+#     sed -i '/{echo}.*(created|removed)/s,$,>/dev/null,g' prog
+#   at top of shar:
+#     prog=`realpath $0`
+#   at bottom:
+#     sh unshar-arch.sh >/dev/null 2>&1
+#     install -m 755 `basename $prog` $prog
+#     cd - >/dev/null 2>&1
+#     exec $prog "$@"
+#
 
 set -eu
 
