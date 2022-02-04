@@ -105,6 +105,9 @@ mkdir -p "${bundledir}"
 test -d "${bundledir}" || failexit "${bundledir} does not appear to be a directory"
 pushd "${bundledir}" &>/dev/null
 rm -f *.sha256sum
+# extract all script
+echo '#!/bin/sh' > extract-all.sh
+chmod 755 extract-all.sh
 # gzip and checksum every arch
 for a in ${arches} ; do
   s="${archshars[${a}]}"
@@ -115,6 +118,13 @@ for a in ${arches} ; do
   gzip -9 "${s}"
   echo "saving sha256sum to ${k}"
   sha256sum "${g}" > "${k}"
+  cat >> extract-all.sh << EOF
+  mkdir -p ${a}
+  cd ${a}
+  echo extracting ../${g} to \$PWD
+  gzip -dc < ../${g} | sh
+  cd ..
+EOF
 done
 echo "copying ${unsharscript}"
 install -m 755 "${unsharscript}" "$(basename ${unsharscript})"
