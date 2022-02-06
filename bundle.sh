@@ -20,6 +20,27 @@
 #   bash, curl just extract as-is
 #   busybox, toybox, sbase-box, ... need handlers for symlinks
 #
+# XXX - customizable header/foot scriptlets
+#   header bascially replaces '#!/bin/sh' of shar
+#   footer replaces 'exit 0'
+#   default is to reinstall in place
+#   busybox/toybox/sbase-box/ubase-box/coreutils/dropbear symlink creation in footer
+#   then reexec program with same args
+#   curl/bash/... are easy
+#   bundleheader/bundlefooter environment vars would make this tunable
+#   replace footer (exit 0) first, then replace header (#!/bin/sh)
+#   not bad
+#   could a multi-bin bundle be made to work on symlinks?
+#   couldn't do the realpath thing
+#   need commmand -v/hash/which to figure out path, but that could be wrong
+#   would hardlinks work here?
+#   hmm
+#   HMM
+#
+# XXX - create a single binary with something like...
+#   env bins='curl' bundleshar=${PWD}/tmp/curl tmpdir=${PWD}/tmp sharextopts=--quiet-unshar bash bundle.sh
+#   along with header/footer, this could be a handy multi-arch distribution method
+#
 # XXX - pack with xz/lzo/etc.? could be multi-arch shar'ed itself...
 #
 
