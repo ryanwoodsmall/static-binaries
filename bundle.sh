@@ -16,6 +16,10 @@
 #     cd - >/dev/null 2>&1
 #     exec $prog "$@"
 #
+# XXX - add header/footer with "bootstrap /target/dir" detection/post unshar worker
+#   bash, curl just extract as-is
+#   busybox, toybox, sbase-box, ... need handlers for symlinks
+#
 # XXX - pack with xz/lzo/etc.? could be multi-arch shar'ed itself...
 #
 
