@@ -40,9 +40,11 @@ progs+=( "${cwsw}/bearssl/current/bin/brssl" )
 progs+=( "${cwsw}/dropbear/current/bin/dropbearmulti" )
 progs+=( "${cwsw}/less/current/bin/less" )
 progs+=( "${cwsw}/make/current/bin/make" )
+progs+=( "${cwsw}/px5g/current/bin/px5g" )
 progs+=( "${cwsw}/rlwrap/current/bin/rlwrap" )
 progs+=( "${cwsw}/sbase/current/bin/sbase-box" )
 progs+=( "${cwsw}/ubase/current/bin/ubase-box" )
+progs+=( "${cwsw}/x509cert/current/bin/x509cert" )
 
 # build out a dockerfile
 dockerfile=()

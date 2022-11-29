@@ -42,6 +42,7 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 | `mksh` | mirbsd korn shell | http://www.mirbsd.org/mksh.htm |
 | `mlr` | miller, like jq for csv, tsv, etc. | http://www.mirbsd.org/mksh.htm |
 | `neatvi` | small vi-alike | https://github.com/aligrudi/neatvi |
+| `px5g` | ssl/tls key/cert generator using mbedtls, from openwrt | https://github.com/openwrt/openwrt/blob/master/package/utils/px5g-mbedtls/px5g-mbedtls.c |
 | `qemacs` | small emacs-alike | https://bellard.org/qemacs/ |
 | `rc` | rc shell, from suckless 9base | https://git.suckless.org/9base/ |
 | `rlwrap` | readline wrapper to add history, etc., to programs without | https://github.com/hanslub42/rlwrap |
@@ -55,6 +56,7 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 | `toybox` | toybox single-binary userspace | http://landley.net/toybox/ |
 | `ubase-box` | suckless ubase unportable tools in a single binary | https://git.suckless.org/ubase/ |
 | `unrar` | rar file unarachiver | https://www.rarlab.com/rar_add.htm |
+| `x509cert` | x.509 cert generator using bearssl | https://github.com/michaelforney/x509cert |
 | `xml` | xmlstartlet toolkit | http://xmlstar.sourceforge.net/ |
 | `xmllint` | libxml2 linter | http://xmlsoft.org/ |
 | `xz` | xz/lzma (de-)compression tool | https://tukaani.org/xz/ |
