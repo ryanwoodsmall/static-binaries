@@ -40,7 +40,7 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 | `make` | gnu make | https://www.gnu.org/software/make/ |
 | `mk` | mk, from suckless 9base | https://git.suckless.org/9base/ |
 | `mksh` | mirbsd korn shell | http://www.mirbsd.org/mksh.htm |
-| `mlr` | miller, like jq for csv, tsv, etc. | http://www.mirbsd.org/mksh.htm |
+| `mlr` | miller, like jq for csv, tsv, etc. (ver 5, in c) | https://github.com/johnkerl/miller |
 | `neatvi` | small vi-alike | https://github.com/aligrudi/neatvi |
 | `px5g` | ssl/tls key/cert generator using mbedtls, from openwrt | https://github.com/openwrt/openwrt/blob/master/package/utils/px5g-mbedtls/px5g-mbedtls.c |
 | `qemacs` | small emacs-alike | https://bellard.org/qemacs/ |
