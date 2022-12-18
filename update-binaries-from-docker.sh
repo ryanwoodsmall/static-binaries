@@ -2,6 +2,10 @@
 #
 # update some static binaries from our upstream docker builds
 #
+# XXX - max 127 layers in a dockerfile, getting close...
+# XXX - probably need to move to per-arch cp/tar w/loop and COPY each arch.tar off
+#
+
 set -eu
 set -o pipefail
 
@@ -36,12 +40,15 @@ progs+=( "/usr/bin/curl" )
 progs+=( "/usr/bin/toybox" )
 progs+=( "${cwsw}/9base/current/bin/mk" )
 progs+=( "${cwsw}/9base/current/bin/rc" )
+progs+=( "${cwsw}/ag/current/bin/ag" )
 progs+=( "${cwsw}/bearssl/current/bin/brssl" )
 progs+=( "${cwsw}/dropbear/current/bin/dropbearmulti" )
+progs+=( "${cwsw}/entr/current/bin/entr" )
 progs+=( "${cwsw}/jo/current/bin/jo" )
 progs+=( "${cwsw}/jq/current/bin/jq" )
 progs+=( "${cwsw}/less/current/bin/less" )
 progs+=( "${cwsw}/make/current/bin/make" )
+progs+=( "${cwsw}/pv/current/bin/pv" )
 progs+=( "${cwsw}/px5g/current/bin/px5g" )
 progs+=( "${cwsw}/rlwrap/current/bin/rlwrap" )
 progs+=( "${cwsw}/sbase/current/bin/sbase-box" )

@@ -25,6 +25,7 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 
 | binary | info | site |
 | --- | --- | --- |
+| `ag` | the silver searcher | https://geoff.greer.fm/ag/ |
 | `bash` | gnu bash shell | https://www.gnu.org/software/bash/ |
 | `brssl` | bearssl ssl/tls implementation | https://bearssl.org/ |
 | `busybox` | busybox single-binary userspace | https://busybox.net/ |
@@ -33,6 +34,7 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 | `curl` | curl http/https/ftp/etc. client | https://curl.se/ |
 | `dash` | dash shell | http://gondor.apana.org.au/~herbert/dash/ |
 | `dropbearmulti` | dropbear single-binary ssh/scp client/server | https://matt.ucc.asn.au/dropbear/dropbear.html |
+| `entr` | entr, run arbitrary commands when a file changes | http://eradman.com/entrproject/ |
 | `jo` | json output from shell | https://github.com/jpmens/jo |
 | `jq` | jq, sed/awk/grep/etc. for json | https://stedolan.github.io/jq/ |
 | `less` | less console text pager | http://www.greenwoodsoftware.com/less/ |
@@ -42,6 +44,7 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 | `mksh` | mirbsd korn shell | http://www.mirbsd.org/mksh.htm |
 | `mlr` | miller, like jq for csv, tsv, etc. (ver 5, in c) | https://github.com/johnkerl/miller |
 | `neatvi` | small vi-alike | https://github.com/aligrudi/neatvi |
+| `pv` | pipe viewer | https://www.ivarch.com/programs/pv.shtml |
 | `px5g` | ssl/tls key/cert generator using mbedtls, from openwrt | https://github.com/openwrt/openwrt/blob/master/package/utils/px5g-mbedtls/px5g-mbedtls.c |
 | `qemacs` | small emacs-alike | https://bellard.org/qemacs/ |
 | `rc` | rc shell, from suckless 9base | https://git.suckless.org/9base/ |
