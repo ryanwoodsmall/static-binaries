@@ -54,6 +54,7 @@ progs+=( "${cwsw}/rlwrap/current/bin/rlwrap" )
 progs+=( "${cwsw}/sbase/current/bin/sbase-box" )
 progs+=( "${cwsw}/ubase/current/bin/ubase-box" )
 progs+=( "${cwsw}/x509cert/current/bin/x509cert" )
+progs+=( "${cwsw}/xz/current/bin/xz" )
 
 # build out a dockerfile
 dockerfile=()
