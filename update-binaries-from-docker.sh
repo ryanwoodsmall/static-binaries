@@ -2,8 +2,7 @@
 #
 # update some static binaries from our upstream docker builds
 #
-# XXX - max 127 layers in a dockerfile, getting close...
-# XXX - probably need to move to per-arch cp/tar w/loop and COPY each arch.tar off
+# XXX - max 127 layers in a dockerfile
 #
 
 set -eu
@@ -57,31 +56,29 @@ progs+=( "${cwsw}/ubase/current/bin/ubase-box" )
 progs+=( "${cwsw}/x509cert/current/bin/x509cert" )
 progs+=( "${cwsw}/xz/current/bin/xz" )
 
-# build out a dockerfile
-dockerfile=()
+# build out a per-arch dockerfile, run it and untar the contents the static-binaries directory
 for arch in ${a} ; do
+  dockerfile=()
   dockerfile+=( "FROM ${v}/${i}:${arch} AS ${arch}" )
-done
-dockerfile+=( "FROM ${v}/${i}" )
-dockerfile+=( "RUN rm -rf ${td} && mkdir -p ${td}" )
-dockerfile+=( "WORKDIR ${td}" )
-for arch in ${a} ; do
+  dockerfile+=( "FROM ${v}/${i}" )
+  dockerfile+=( "RUN rm -rf ${td} && mkdir -p ${td}" )
+  dockerfile+=( "WORKDIR ${td}" )
   ad="${td}/${dockerarch[${arch}]}"
   dockerfile+=( "RUN cd ${td} && rm -rf ${ad} && mkdir -p ${ad}" )
   for prog in ${progs[@]} ; do
     sn="$(basename ${prog})"
     dockerfile+=( "COPY --from=${arch} ${prog} ${ad}/${sn}" )
   done
+  dockerfile+=( "RUN find . -type f | xargs toybox file | sort" )
+  docker image rm ${v}/${i}:${t}-${arch} || true
+  for l in ${!dockerfile[@]} ; do
+    echo "${dockerfile[${l}]}"
+  done | docker build --no-cache --tag ${v}/${i}:${t}-${arch} -
+  docker run --rm ${v}/${i}:${t}-${arch} tar -cf - . | tar -xvf -
 done
-dockerfile+=( "RUN find . -type f | xargs toybox file | sort" )
 
-# kill existing image
-docker image rm ${v}/${i}:${t} || true
-
-# build our image...
-for i in ${!dockerfile[@]} ; do
-  echo "${dockerfile[${i}]}"
-done | docker build --no-cache --pull --tag ${v}/${i}:${t} -
-
-# and run a tar -c | tar -x to get our payload
-docker run --rm ${v}/${i}:${t} tar -cf - . | tar -xvf -
+# cleanup
+for arch in ${a} ; do
+  docker image rm ${v}/${i}:${t}-${arch} || true
+done
+docker image prune -f
