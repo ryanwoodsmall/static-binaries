@@ -24,7 +24,7 @@ dockerarches="${!dockerarch[@]}"
 : ${v:="ryanwoodsmall"}
 : ${i:="crosware"}
 : ${a:="${dockerarches}"}
-# tag default for generated image
+# base tag default for generated images
 : ${t:="static-binaries"}
 
 # crosware vars
@@ -56,7 +56,7 @@ progs+=( "${cwsw}/ubase/current/bin/ubase-box" )
 progs+=( "${cwsw}/x509cert/current/bin/x509cert" )
 progs+=( "${cwsw}/xz/current/bin/xz" )
 
-# build out a per-arch dockerfile, run it and untar the contents the static-binaries directory
+# build out a per-arch dockerfile
 for arch in ${a} ; do
   dockerfile=()
   dockerfile+=( "FROM ${v}/${i}:${arch} AS ${arch}" )
@@ -70,10 +70,12 @@ for arch in ${a} ; do
     dockerfile+=( "COPY --from=${arch} ${prog} ${ad}/${sn}" )
   done
   dockerfile+=( "RUN find . -type f | xargs toybox file | sort" )
+  # build a temp image to archive $arch binaries
   docker image rm ${v}/${i}:${t}-${arch} || true
   for l in ${!dockerfile[@]} ; do
     echo "${dockerfile[${l}]}"
   done | docker build --no-cache --tag ${v}/${i}:${t}-${arch} -
+  # tar/untar the contents of the $arch static-binaries directory
   docker run --rm ${v}/${i}:${t}-${arch} tar -cf - . | tar -xvf -
 done
 
