@@ -54,6 +54,7 @@ test -e "${archdir}" || failexit "${archdir} does not exist"
 : ${recipelist:=""}
 if [ -z "${recipelist}" ] ; then
   recipelist+=" 9base"
+  recipelist+=" alpinemuslutils"
   recipelist+=" bash"
   recipelist+=" bearssl"
   recipelist+=" bootstrapmake"
@@ -99,6 +100,9 @@ if [ -z "${recipelist}" ] ; then
 fi
 : ${binarylist:=""}
 if [ -z "${binarylist}" ] ; then
+  binarylist+=" ${cwsw}/alpinemuslutils/current/bin/alpine-iconv"
+  binarylist+=" ${cwsw}/alpinemuslutils/current/bin/getconf"
+  binarylist+=" ${cwsw}/alpinemuslutils/current/bin/getent"
   binarylist+=" ${cwsw}/9base/current/bin/mk"
   binarylist+=" ${cwsw}/9base/current/bin/rc"
   binarylist+=" ${cwsw}/9base/current/bin/urlencode"
