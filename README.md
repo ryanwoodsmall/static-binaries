@@ -64,7 +64,39 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 | `xmllint` | libxml2 linter | http://xmlsoft.org/ |
 | `xz` | xz/lzma (de-)compression tool | https://tukaani.org/xz/ |
 
+## libraries used
+
+various libs that may or may not be used by static binaries above.
+
+| `acl` | POSIX access control lists | https://savannah.nongnu.org/projects/acl |
+| `attr` | library for extended filesystem attributes | https://savannah.nongnu.org/projects/attr |
+| `libedit` | NetBSD editline library | https://thrysoee.dk/editline/ |
+| `libevent` | event library using callbacks/signals/timeouts | https://libevent.org/ |
+| `expat` | XML parsing library | https://libexpat.github.io/ |
+| `gettext-tiny` | lightweight/stub replacements for GNU gettext | https://github.com/sabotage-linux/gettext-tiny |
+| `gmp` | GNU bignum lib | https://gmplib.org/ |
+| `libcap` | linux capabilities | https://sites.google.com/site/fullycapable/ |
+| `libgcrypt` | crytpograhic library from GnuPG | https://www.gnupg.org/software/libgcrypt/index.html |
+| `libgpg-error` | error-handling library for GnuPG | https://www.gnupg.org/software/libgpg-error/index.html |
+| `libressl` | OpenBSD TLS/SSL library | https://www.libressl.org/ |
+| `libssh2` | client-side SSH2 protocol lib | https://libssh2.org/ |
+| `libxml2` | XML parsing library | https://gitlab.gnome.org/GNOME/libxml2 |
+| `libxslt` | XSLT library for libxml2 | https://gitlab.gnome.org/GNOME/libxslt |
+| `lz4` | compression library | https://lz4.org/ |
+| `mbedtls` | embedded TLS/SSL library | https://github.com/Mbed-TLS/mbedtls |
+| `musl` | small C standard library | https://musl.libc.org/ |
+| `netbsd-curses` | portable NetBSD curses implementation | https://github.com/sabotage-linux/netbsd-curses |
+| `nghttp2` | HTTP/2 client library | https://nghttp2.org/ |
+| `oniguruma` | regular expression library | https://github.com/kkos/oniguruma |
+| `openssl` | TLS/SSL library | https://openssl-library.org/ |
+| `pcre` | perl compatible regular expression library | https://www.pcre.org/ |
+| `readline` | library for line editing, history, completion, etc. | https://tiswww.cwru.edu/php/chet/readline/rltop.html |
+| `zlib` | compression library | https://zlib.net/ |
+| `zstd` | compression library | https://facebook.github.io/zstd/ |
+
 # todo
 
 - need to checksum/catalog binaries, sha-256 should work
 - capture versions as well?
+- libraries
+- licenses
