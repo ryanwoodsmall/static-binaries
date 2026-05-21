@@ -25,25 +25,35 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 
 | binary | info | site |
 | --- | --- | --- |
+| --- | --- | --- |
+| `9p` | 9p client from plan9port | https://github.com/9fans/plan9port |
 | `ag` | the silver searcher | https://geoff.greer.fm/ag/ |
+| `alpine-iconv` | character encoding converter from alpine | https://gitlab.alpinelinux.org/alpine/aports/-/tree/master/main/musl |
 | `bash` | gnu bash shell | https://www.gnu.org/software/bash/ |
 | `brssl` | bearssl ssl/tls implementation | https://bearssl.org/ |
 | `busybox` | busybox single-binary userspace | https://busybox.net/ |
+| `carl` | small curl-like utility from crypto ancienne (cryanc) | https://github.com/classilla/cryanc |
 | `ccache` | c/c++ compiler cache, v3.x | https://ccache.dev/ |
 | `coreutils` | gnu coreutils in single-binary symlink form | https://www.gnu.org/software/coreutils/ |
 | `curl` | curl http/https/ftp/etc. client | https://curl.se/ |
 | `dash` | dash shell | http://gondor.apana.org.au/~herbert/dash/ |
 | `dropbearmulti` | dropbear single-binary ssh/scp client/server | https://matt.ucc.asn.au/dropbear/dropbear.html |
 | `entr` | entr, run arbitrary commands when a file changes | http://eradman.com/entrproject/ |
+| `getconf` | system configuration utility from alpine | https://gitlab.alpinelinux.org/alpine/aports/-/tree/master/main/musl |
+| `getent` | user/group information utility from alpine | https://gitlab.alpinelinux.org/alpine/aports/-/tree/master/main/musl |
+| `ixpc` | 9p client/server library/utility | https://github.com/0intro/libixp |
 | `jo` | json output from shell | https://github.com/jpmens/jo |
 | `jq` | jq, sed/awk/grep/etc. for json | https://stedolan.github.io/jq/ |
 | `less` | less console text pager | http://www.greenwoodsoftware.com/less/ |
 | `links` | links console-mode web browser | http://links.twibright.com/ |
 | `make` | gnu make | https://www.gnu.org/software/make/ |
+| `mandoc` | man page utilty | http://mandoc.bsd.lv/ |
 | `mk` | mk, from suckless 9base | https://git.suckless.org/9base/ |
 | `mksh` | mirbsd korn shell | http://www.mirbsd.org/mksh.htm |
 | `mlr` | miller, like jq for csv, tsv, etc. (ver 5, in c) | https://github.com/johnkerl/miller |
 | `neatvi` | small vi-alike | https://github.com/aligrudi/neatvi |
+| `nc` | netcat | ... |
+| `patchelf` | ELF binary modification utility | https://github.com/nixos/patchelf |
 | `pv` | pipe viewer | https://www.ivarch.com/programs/pv.shtml |
 | `px5g` | ssl/tls key/cert generator using mbedtls, from openwrt | https://github.com/openwrt/openwrt/blob/master/package/utils/px5g-mbedtls/px5g-mbedtls.c |
 | `qemacs` | small emacs-alike | https://bellard.org/qemacs/ |
@@ -53,12 +63,15 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 | `sbase-box` | suckless sbase portable userspace in a single binary | https://git.suckless.org/sbase/ |
 | `screen` | gnu screen window manager | https://www.gnu.org/software/screen/ |
 | `socat` | general purpose network/socat/server/etc. connector | http://www.dest-unreach.org/socat/ |
+| `sslh` | SSL/SSH multiplexer | https://github.com/yrutschle/sslh |
 | `stunnel` | secure tunnel ssl/tls service wrapper/tunnel/proxy | https://www.stunnel.org/ |
 | `tini` | small init for container use | https://github.com/krallin/tini |
 | `tmux` | tmux terminal mutliplexer/window manager/etc. | https://github.com/tmux/tmux |
 | `toybox` | toybox single-binary userspace | http://landley.net/toybox/ |
+| `u9fs` | userspace 9p server | https://github.com/Plan9-Archive/u9fs |
 | `ubase-box` | suckless ubase unportable tools in a single binary | https://git.suckless.org/ubase/ |
 | `unrar` | rar file unarachiver | https://www.rarlab.com/rar_add.htm |
+| `urlencode` | URL encoder/decorder utility from 9base | https://tools.suckless.org/9base/ |
 | `x509cert` | x.509 cert generator using bearssl | https://github.com/michaelforney/x509cert |
 | `xml` | xmlstartlet toolkit | http://xmlstar.sourceforge.net/ |
 | `xmllint` | libxml2 linter | http://xmlsoft.org/ |
@@ -75,9 +88,14 @@ various libs that may or may not be used by static binaries above.
 | `expat` | XML parsing library | https://libexpat.github.io/ |
 | `gettext-tiny` | lightweight/stub replacements for GNU gettext | https://github.com/sabotage-linux/gettext-tiny |
 | `gmp` | GNU bignum lib | https://gmplib.org/ |
+| `libbsd` | BSD function/compatibility library | https://gitlab.freedesktop.org/libbsd/libbsd |
 | `libcap` | linux capabilities | https://sites.google.com/site/fullycapable/ |
+| `libconfig` | structured config file library | https://github.com/hyperrealm/libconfig |
+| `libev` | event loop library | https://software.schmorp.de/pkg/libev.html |
 | `libgcrypt` | crytpograhic library from GnuPG | https://www.gnupg.org/software/libgcrypt/index.html |
 | `libgpg-error` | error-handling library for GnuPG | https://www.gnupg.org/software/libgpg-error/index.html |
+| `libmd` | BSD message digest library | https://gitlab.freedesktop.org/libbsd/libmd |
+| `libproxprotocol` | HAproxy proxy protocol library | https://github.com/kosmas-valianos/libproxyprotocol |
 | `libressl` | OpenBSD TLS/SSL library | https://www.libressl.org/ |
 | `libssh2` | client-side SSH2 protocol lib | https://libssh2.org/ |
 | `libxml2` | XML parsing library | https://gitlab.gnome.org/GNOME/libxml2 |
