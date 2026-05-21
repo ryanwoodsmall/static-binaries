@@ -25,7 +25,6 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 
 | binary | info | site |
 | --- | --- | --- |
-| --- | --- | --- |
 | `9p` | 9p client from plan9port | https://github.com/9fans/plan9port |
 | `ag` | the silver searcher | https://geoff.greer.fm/ag/ |
 | `alpine-iconv` | character encoding converter from alpine | https://gitlab.alpinelinux.org/alpine/aports/-/tree/master/main/musl |
@@ -51,8 +50,8 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 | `mk` | mk, from suckless 9base | https://git.suckless.org/9base/ |
 | `mksh` | mirbsd korn shell | http://www.mirbsd.org/mksh.htm |
 | `mlr` | miller, like jq for csv, tsv, etc. (ver 5, in c) | https://github.com/johnkerl/miller |
-| `neatvi` | small vi-alike | https://github.com/aligrudi/neatvi |
 | `nc` | netcat | ... |
+| `neatvi` | small vi-alike | https://github.com/aligrudi/neatvi |
 | `patchelf` | ELF binary modification utility | https://github.com/nixos/patchelf |
 | `pv` | pipe viewer | https://www.ivarch.com/programs/pv.shtml |
 | `px5g` | ssl/tls key/cert generator using mbedtls, from openwrt | https://github.com/openwrt/openwrt/blob/master/package/utils/px5g-mbedtls/px5g-mbedtls.c |
@@ -81,17 +80,19 @@ updates will be provided, possibly, sometime, on an "i guess i should maybe upda
 
 various libs that may or may not be used by static binaries above.
 
+| library | info | site |
+| --- | --- | --- |
 | `acl` | POSIX access control lists | https://savannah.nongnu.org/projects/acl |
 | `attr` | library for extended filesystem attributes | https://savannah.nongnu.org/projects/attr |
-| `libedit` | NetBSD editline library | https://thrysoee.dk/editline/ |
-| `libevent` | event library using callbacks/signals/timeouts | https://libevent.org/ |
 | `expat` | XML parsing library | https://libexpat.github.io/ |
 | `gettext-tiny` | lightweight/stub replacements for GNU gettext | https://github.com/sabotage-linux/gettext-tiny |
 | `gmp` | GNU bignum lib | https://gmplib.org/ |
 | `libbsd` | BSD function/compatibility library | https://gitlab.freedesktop.org/libbsd/libbsd |
 | `libcap` | linux capabilities | https://sites.google.com/site/fullycapable/ |
 | `libconfig` | structured config file library | https://github.com/hyperrealm/libconfig |
+| `libedit` | NetBSD editline library | https://thrysoee.dk/editline/ |
 | `libev` | event loop library | https://software.schmorp.de/pkg/libev.html |
+| `libevent` | event library using callbacks/signals/timeouts | https://libevent.org/ |
 | `libgcrypt` | crytpograhic library from GnuPG | https://www.gnupg.org/software/libgcrypt/index.html |
 | `libgpg-error` | error-handling library for GnuPG | https://www.gnupg.org/software/libgpg-error/index.html |
 | `libmd` | BSD message digest library | https://gitlab.freedesktop.org/libbsd/libmd |
