@@ -119,3 +119,16 @@ various libs that may or may not be used by static binaries above.
 - capture versions as well?
 - libraries
 - licenses
+- add
+  - `byacc`
+  - `diff` (GNU)
+  - `flex`
+  - `gawk`
+  - `git2` (`libgit2`)
+  - `mawk`
+  - `m4` (GNU)
+  - `nextvi`
+  - `patch` (GNU)
+  - `reflex`
+  - `sed` (GNU)
+  - ...
