@@ -125,10 +125,11 @@ various libs that may or may not be used by static binaries above.
   - `flex`
   - `gawk`
   - `git2` (`libgit2`)
+  - `ggrep` (GNU)
   - `mawk`
   - `m4` (GNU)
   - `nextvi`
   - `patch` (GNU)
   - `reflex`
-  - `sed` (GNU)
+  - `gsed` (GNU)
   - ...
